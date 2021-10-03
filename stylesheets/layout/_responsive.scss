@@ -1,3 +1,58 @@
 @media screen and (min-width: 800px) {
-// Code for desktop
+	.burger {
+		display: none;
+	}
+	.nav-links {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 50%;
+		max-width: 600px;
+
+		a {
+			display: inline-block;
+			position: relative;
+			text-transform: uppercase;
+			font-size: 1.1rem;
+			letter-spacing: 1px;
+			font-weight: 700;
+			color: $very-dark-blue;
+
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				transform: scaleX(0);
+				height: 2px;
+				bottom: -2px;
+				left: 0;
+				background-color: $very-dark-blue;
+				transform-origin: bottom right;
+				transition: transform 0.25s ease-out;
+			}
+
+			&:last-of-type::after {
+				background-color: $grayish-blue;
+			}
+
+			&:hover::after {
+				transform: scaleX(1);
+				transform-origin: bottom left;
+			}
+			&:last-of-type {
+				color: $grayish-blue;
+				&::before {
+					content: "";
+					position: absolute;
+					width: 9px;
+                    height: 9px;
+					left: -30px;
+                    top: 5px;
+                    border-radius: 50%;
+					background-color: $grayish-blue;
+				}
+			}
+		}
+	}
 }
