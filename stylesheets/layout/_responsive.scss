@@ -1,4 +1,7 @@
 @media screen and (min-width: 800px) {
+	nav.container {
+		height: auto;
+	}
 	.burger {
 		display: none;
 	}
@@ -17,7 +20,6 @@
 			letter-spacing: 1px;
 			font-weight: 700;
 			color: $very-dark-blue;
-
 
 			&::after {
 				content: "";
@@ -46,13 +48,41 @@
 					content: "";
 					position: absolute;
 					width: 9px;
-                    height: 9px;
+					height: 9px;
 					left: -30px;
-                    top: 5px;
-                    border-radius: 50%;
+					top: 5px;
+					border-radius: 50%;
 					background-color: $grayish-blue;
 				}
 			}
+		}
+	}
+
+	body > nav + img {
+		width: 70%;
+	}
+
+	.bg {
+		width: 68%;
+		height: 350px;
+	}
+
+	section.container {
+		margin-top: 190px;
+
+		h1 {
+			width: 39%;
+			font-size: 3.5rem;
+		}
+
+		a {
+			padding: 15px 35px;
+			font-size: 1.8rem;
+		}
+
+		> span {
+			margin-left: 20px;
+			font-size: 1.1rem;
 		}
 	}
 }

@@ -91,6 +91,10 @@ button:-moz-focusring,
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container {
   width: 90%;
   max-width: 1400px;
@@ -107,6 +111,7 @@ nav.container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 50px;
+  height: 400px;
 }
 
 .logo {
@@ -116,8 +121,6 @@ nav.container {
 }
 
 .burger {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,7 +154,7 @@ nav.container {
 }
 
 .burger-active .line2 {
-  background: none;
+  opacity: 0;
 }
 
 .burger-active .line3 {
@@ -170,15 +173,18 @@ nav.container {
   display: block;
   -webkit-box-shadow: -2px 2px 5px #a0a1ac, 2px -2px 5px rgba(160, 161, 172, 0.1);
           box-shadow: -2px 2px 5px #a0a1ac, 2px -2px 5px rgba(160, 161, 172, 0.1);
+  background-color: #fafafa;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-animation: nav-links 1s both;
           animation: nav-links 1s both;
+  position: relative;
+  z-index: 2;
 }
 
 .nav-links-active a {
   display: block;
-  margin: 10px;
+  margin: 22px;
   text-transform: uppercase;
   font-size: 1.3rem;
   text-align: center;
@@ -201,8 +207,8 @@ nav.container {
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(0) rotate(0);
-            transform: translateY(0) rotate(0);
+    -webkit-transform: translateY(-30px) rotate(0);
+            transform: translateY(-30px) rotate(0);
     opacity: 1;
   }
 }
@@ -214,13 +220,122 @@ nav.container {
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(0) rotate(0);
-            transform: translateY(0) rotate(0);
+    -webkit-transform: translateY(-30px) rotate(0);
+            transform: translateY(-30px) rotate(0);
     opacity: 1;
   }
 }
 
+body > nav + img {
+  display: block;
+  width: 75%;
+  max-width: 1000px;
+  min-width: 500px;
+  position: absolute;
+  right: -100px;
+  top: 150px;
+  z-index: -1;
+}
+
+.bg {
+  width: 50%;
+  max-width: 1000px;
+  height: 450px;
+  background-color: #eef3f6;
+  border-bottom-left-radius: 50px;
+  position: absolute;
+  z-index: -2;
+  right: 0;
+  top: 0;
+}
+
+section.container {
+  margin-top: 80px;
+  padding: 20px 0;
+}
+
+section.container div.before-heading {
+  margin-bottom: 20px;
+}
+
+section.container div.before-heading span:nth-child(1) {
+  padding: 2px 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #242942;
+}
+
+section.container div.before-heading span:nth-child(2) {
+  letter-spacing: 5px;
+  margin-left: 20px;
+  color: #a0a1ac;
+  text-transform: uppercase;
+}
+
+section.container h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+section.container p {
+  font-family: "Barlow", sans-serif;
+  color: #5b5f71;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+section.container a {
+  display: inline-block;
+  color: white;
+  background-color: #ff5c5c;
+  margin-bottom: 20px;
+  padding: 12px 17px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-family: "Barlow Condensed", sans-serif;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-animation: myAnima 2s ease infinite normal forwards;
+          animation: myAnima 2s ease infinite normal forwards;
+}
+
+section.container a:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+@-webkit-keyframes myAnima {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes myAnima {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+section.container > span {
+  display: inline-block;
+  margin-left: 13px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #a0a1ac;
+}
+
 @media screen and (min-width: 800px) {
+  nav.container {
+    height: auto;
+  }
   .burger {
     display: none;
   }
@@ -284,5 +399,27 @@ nav.container {
     top: 5px;
     border-radius: 50%;
     background-color: #a0a1ac;
+  }
+  body > nav + img {
+    width: 70%;
+  }
+  .bg {
+    width: 68%;
+    height: 350px;
+  }
+  section.container {
+    margin-top: 190px;
+  }
+  section.container h1 {
+    width: 39%;
+    font-size: 3.5rem;
+  }
+  section.container a {
+    padding: 15px 35px;
+    font-size: 1.8rem;
+  }
+  section.container > span {
+    margin-left: 20px;
+    font-size: 1.1rem;
   }
 }
