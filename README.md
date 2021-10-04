@@ -1,6 +1,6 @@
 # Frontend Mentor - Project tracking intro component solution
 
-## [Live Project]()
+## [Live Project](https://seconghamburgernavigationprojectisaac.netlify.app/)
 
 ![Project preview](design/desktop-preview.jpg)
 
@@ -16,7 +16,6 @@
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
 
 ## Overview
 
@@ -30,13 +29,13 @@ Users should be able to:
 
 ### Screenshot
 
-- [Desktop](./screenshot.jpg)
-- [Mobile](./screenshot.jpg)
-- [Mobile Navigation](./screenshot.jpg)
+- [Desktop](images/../design/desktop-design.jpg)
+- [Mobile](images/../design/mobile-design.jpg)
+- [Mobile navigation](images/../design/mobile-navigation.jpg)
 
 ### Links
 
-- [Live Project](https://your-live-site-url.com)
+- [Live Project](https://seconghamburgernavigationprojectisaac.netlify.app/)
 
 ## My process
 
@@ -47,31 +46,8 @@ Users should be able to:
 - CSS custom properties
 - SASS
 - Flexbox
-- CSS Grid
 - JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+It was an easy challenge. The main goal of taking this challenge was to reinforce the hamburger navigation practice. It only took 15 min to conclude the hamburger navigation, so now I feel really comfortable making such a component.
